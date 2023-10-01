@@ -25,3 +25,30 @@ let rec at idx lst =
       Some head
     else
       at (idx - 1) tail
+
+
+
+(* problem 04 tail recursive btw *)
+let length lst =
+  let rec aux acc = function
+    | [] -> acc
+    | _ :: rest -> aux (acc + 1) rest
+  in
+  aux 0 lst
+
+
+
+(* problem 05 *)
+let reverse lst =
+  let rec aux current_list accumulator =
+    match current_list with
+    | [] -> accumulator
+    | head :: tail -> aux tail (head :: accumulator)
+  in
+  aux lst []
+
+
+
+(* problem 06 *)
+let is_palindrome lst =
+  lst = reverse lst
