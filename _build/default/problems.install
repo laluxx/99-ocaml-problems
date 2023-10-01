@@ -1,0 +1,8 @@
+lib: [
+  "_build/install/default/lib/problems/META"
+  "_build/install/default/lib/problems/dune-package"
+  "_build/install/default/lib/problems/opam"
+]
+bin: [
+  "_build/install/default/bin/problems"
+]
